@@ -29,6 +29,8 @@ def update_model_dropdown(selected_provider):
     )
 
 def put_message_in_chatbot(message, history):
+    if not message or not message.strip():
+        return message, history
     return "", history + [{'role': 'user', 'content': message}]
 
 def transcribe_audio(audio_path):

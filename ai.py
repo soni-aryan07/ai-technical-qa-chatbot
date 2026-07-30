@@ -55,7 +55,7 @@ def ask_ai(provider, model, history):
         save_interaction(
             provider= provider,
             model= model,
-            question= history[-1]['content'],
+            question= history[-1]['content'][0]['text'],
             answer= answer,
             response_time = response_time,
             success= True,
